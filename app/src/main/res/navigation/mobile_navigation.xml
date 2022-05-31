@@ -12,14 +12,21 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.hydromon.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_control"
+        android:name="com.example.hydromon.ui.control.ControlFragment"
+        android:label="@string/title_control"
+        tools:layout="@layout/fragment_control" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.hydromon.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_variable"
+        android:name="com.example.hydromon.ui.variable.VariableFragment"
+        android:label="@string/title_variable"
+        tools:layout="@layout/fragment_variable" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.hydromon.ui.profile.ProfileFragment"
+        android:label="@string/title_variable"
+        tools:layout="@layout/profile_fragment" />
+
 </navigation>

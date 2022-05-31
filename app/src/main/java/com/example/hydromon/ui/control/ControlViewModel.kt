@@ -1,13 +1,13 @@
-package com.example.hydromon.ui.notifications
+package com.example.hydromon.ui.control
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class ControlViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is control Fragment"
     }
     val text: LiveData<String> = _text
 }
