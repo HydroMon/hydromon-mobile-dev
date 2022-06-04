@@ -6,16 +6,21 @@ import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import com.example.hydromon.VariableValue
 import com.example.hydromon.databinding.FragmentVariableBinding
+import java.lang.Exception
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -39,164 +44,191 @@ class VariableFragment : Fragment() {
 
         Log.d("fragment created", "${variableValue}")
 
-        val tdsValueScreen: TextView = binding.tdsValue
-        val tdsPlusButton : ImageView = binding.tdsPlusButton
+        val tdsValueScreen: TextView = binding.tdsValueScreen
         var tdsValue = variableValue.tds
-        val tdsMinusButton : ImageView = binding.tdsMinusButton
 
         tdsValueScreen.text = tdsValue.toString()
-        tdsPlusButton.setOnClickListener{
-            tdsPlusButton.setBackgroundColor(Color.GREEN)
-            tdsValue = tdsValue + 1
-            variableValue.tds++
-            tdsValueScreen.text = tdsValue.toString()
-            Handler().postDelayed({
-                tdsPlusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
+        val tdsEditText : EditText = binding.tdsEditText
 
-        tdsMinusButton.setOnClickListener{
-            tdsMinusButton.setBackgroundColor(Color.RED)
-            tdsValue--
-            tdsValueScreen.text = tdsValue.toString()
-            variableValue.tds--
-            Handler().postDelayed({
-                tdsMinusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
+        tdsEditText.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
-        val phValueScreen: TextView = binding.phValue
-        val phPlusButton : ImageView = binding.phPlusButton
-        var phValue = variableValue.ph
-        val phMinusButton : ImageView = binding.phMinusButton
+            }
 
-        phValueScreen.text = phValue.toString()
-        phPlusButton.setOnClickListener{
-            phPlusButton.setBackgroundColor(Color.GREEN)
-            phValue++
-            phValueScreen.text = phValue.toString()
-            variableValue.ph++
-            Handler().postDelayed({
-                phPlusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
-        phMinusButton.setOnClickListener{
-            phMinusButton.setBackgroundColor(Color.RED)
-            phValue--
-            phValueScreen.text = phValue.toString()
-            variableValue.ph--
-            Handler().postDelayed({
-                phMinusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
+            }
 
-        val ecValueScreen: TextView = binding.ecValue
-        val ecPlusButton : ImageView = binding.ecPlusButton
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().isEmpty()) {
+                    tdsEditText.error = "tes error"
+                }else{
+                    if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
+                        tdsEditText.error = "invalid input"
+                        variableValue.tds = p0.toString().toInt()
+                    }else{
+                        variableValue.tds = p0.toString().toInt()
+                    }
+                }
+            }
+
+        })
+
+        var phEditText : EditText = binding.phEditText
+        var phValueScreen = binding.phValueScreen
+        phValueScreen.text = variableValue.ph.toString()
+
+        phEditText.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().isEmpty()) {
+                    phEditText.error = "tes error"
+                }else{
+//                    Log.d("error we ","${p0.toString().toFloat()}")
+                    if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
+                        phEditText.error = "invalid input"
+                        variableValue.ph = p0.toString().toFloat()
+                    }else{
+                        variableValue.ph = p0.toString().toFloat()
+                    }
+                }
+            }
+        })
+
+        val ecValueScreen: TextView = binding.ecValueScreen
         var ecValue = variableValue.ec
-        val ecMinusButton : ImageView = binding.ecMinusButton
 
         ecValueScreen.text = ecValue.toString()
-        ecPlusButton.setOnClickListener{
-            ecPlusButton.setBackgroundColor(Color.GREEN)
-            ecValue++
-            ecValueScreen.text = ecValue.toString()
-            variableValue.ec++
-            Handler().postDelayed({
-                ecPlusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
+        val ecEditText : EditText = binding.ecEditText
 
-        ecMinusButton.setOnClickListener{
-            ecMinusButton.setBackgroundColor(Color.RED)
-            ecValue--
-            ecValueScreen.text = ecValue.toString()
-            variableValue.ec--
-            Handler().postDelayed({
-                ecMinusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
+        ecEditText.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
-        val humidityValueScreen: TextView = binding.humidityValue
-        val humidityPlusButton : ImageView = binding.humidityPlusButton
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().isEmpty()) {
+                    ecEditText.error = "tes error"
+                }else{
+//                    Log.d("error we ","${p0.toString().toFloat()}")
+                    if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
+                        ecEditText.error = "invalid input"
+                        variableValue.ec = p0.toString().toInt()
+                    }else{
+                        variableValue.ec = p0.toString().toInt()
+                    }
+                }
+            }
+
+        })
+
+        val humidityValueScreen: TextView = binding.humidityValueScreen
         var humidityValue = variableValue.humidity
-        val humidityMinusButton : ImageView = binding.humidityMinusButton
-
         humidityValueScreen.text = humidityValue.toString()
-        humidityPlusButton.setOnClickListener{
-            humidityPlusButton.setBackgroundColor(Color.GREEN)
-            humidityValue++
-            humidityValueScreen.text = humidityValue.toString()
-            Handler().postDelayed({
-                humidityPlusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
 
-        humidityMinusButton.setOnClickListener{
-            humidityMinusButton.setBackgroundColor(Color.RED)
-            humidityValue--
-            humidityValueScreen.text = humidityValue.toString()
-            Handler().postDelayed({
-                humidityMinusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
+        val humidityEditText : EditText = binding.humidityEditText
 
-        val temperatureValueScreen: TextView = binding.temperatureValue
-        val temperaturePlusButton : ImageView = binding.temperaturePlusButton
+        humidityEditText.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().isEmpty()) {
+                    ecEditText.error = "tes error"
+                }else{
+                    if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
+                        humidityEditText.error = "invalid input"
+                        variableValue.humidity = p0.toString().toInt()
+                    }else{
+                        variableValue.humidity = p0.toString().toInt()
+                    }
+                }
+            }
+        })
+
+        val temperatureValueScreen: TextView = binding.temperatureValueScreen
         var temperatureValue = variableValue.temperature
-        val temperatureMinusButton : ImageView = binding.temperatureMinusButton
-
         temperatureValueScreen.text = temperatureValue.toString()
-        temperaturePlusButton.setOnClickListener{
-            temperaturePlusButton.setBackgroundColor(Color.GREEN)
-            temperatureValue++
-            temperatureValueScreen.text = temperatureValue.toString()
-            variableValue.temperature++
-            Handler().postDelayed({
-                temperaturePlusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
 
-        temperatureMinusButton.setOnClickListener{
-            temperatureMinusButton.setBackgroundColor(Color.RED)
-            temperatureValue--
-            temperatureValueScreen.text = temperatureValue.toString()
-            variableValue.temperature--
-            Handler().postDelayed({
-                temperatureMinusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
+        val temperatureEditText : EditText = binding.temperatureEditText
 
-        val lightIntensityValueScreen: TextView = binding.lightIntensityValue
-        val lightIntensityPlusButton : ImageView = binding.lightIntensityPlusButton
+        temperatureEditText.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().isEmpty()) {
+                    ecEditText.error = "tes error"
+                }else{
+                    if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
+                        temperatureEditText.error = "invalid input"
+                        variableValue.temperature = p0.toString().toInt()
+                    }else{
+                        variableValue.temperature = p0.toString().toInt()
+                    }
+                }
+            }
+        })
+
+        val lightIntensityValueScreen: TextView = binding.lightIntensityValueScreen
         var lightIntensityValue = variableValue.light_intensity
-        val lightIntensityMinusButton : ImageView = binding.lightIntensityMinusButton
-
         lightIntensityValueScreen.text = lightIntensityValue.toString()
-        lightIntensityPlusButton.setOnClickListener{
-            lightIntensityPlusButton.setBackgroundColor(Color.GREEN)
-            lightIntensityValue++
-            lightIntensityValueScreen.text = lightIntensityValue.toString()
-            variableValue.light_intensity++
-            Handler().postDelayed({
-                lightIntensityPlusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
 
-        lightIntensityMinusButton.setOnClickListener{
-            lightIntensityMinusButton.setBackgroundColor(Color.RED)
-            lightIntensityValue--
-            lightIntensityValueScreen.text = lightIntensityValue.toString()
-            variableValue.light_intensity--
-            Handler().postDelayed({
-                lightIntensityMinusButton.setBackgroundColor(0x00000000)
-            }, 100)
-        }
+        val lightIntensityEditText : EditText = binding.lightIntensityEditText
+
+        lightIntensityEditText.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().isEmpty()) {
+                    ecEditText.error = "tes error"
+                }else{
+                    if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
+                        lightIntensityEditText.error = "invalid input"
+                        variableValue.light_intensity = p0.toString().toInt()
+                    }else{
+                        variableValue.light_intensity = p0.toString().toInt()
+                    }
+                }
+            }
+        })
 
         val saveButton : Button = binding.saveButton
 
         saveButton.setOnClickListener{
-            saveData(variableValue)
+//            Log.d("variable inv", "${variableValue}")
+            if((variableValue.tds>14 || variableValue.tds<1) || (variableValue.ph>14 || variableValue.ph<1) || (variableValue.ec>14 || variableValue.ec<1) || (variableValue.humidity>14 || variableValue.humidity<1) || (variableValue.temperature>14 || variableValue.temperature<1) || (variableValue.light_intensity>14 || variableValue.light_intensity<1)){
+                Log.d("variable inv", "INV VARIABLE")
+            }else{
+                saveData(variableValue)
+            }
         }
         return root
     }
@@ -212,7 +244,7 @@ class VariableFragment : Fragment() {
         val prefSave = preference?.edit()
         prefSave?.apply {
             putInt("TDS_VALUE", variableValue.tds)
-            putInt("PH_VALUE", variableValue.ph)
+            putFloat("PH_VALUE", variableValue.ph)
             putInt("EC_VALUE", variableValue.ec)
             putInt("HUMIDITY_VALUE", variableValue.humidity)
             putInt("TEMPERATURE_VALUE", variableValue.temperature)
@@ -230,8 +262,8 @@ class VariableFragment : Fragment() {
 
         val variableValue = VariableValue()
         variableValue.tds = preference.getInt("TDS_VALUE", 23)
-        variableValue.ph = preference.getInt("PH_VALUE", 23)
-        variableValue.ec = preference.getInt("EC_VALUE",23)
+        variableValue.ph = preference.getFloat("PH_VALUE", 7.0F)
+        variableValue.ec = preference.getInt("EC_VALUE",5)
         variableValue.humidity = preference.getInt("HUMIDITY_VALUE",22)
         variableValue.temperature = preference.getInt("TEMPERATURE_VALUE",23)
         variableValue.light_intensity = preference.getInt("LIGHT_INTENSITY_VALUE",23)
