@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
-        navView.itemBackgroundResource = R.color.navColor
+        navView.itemBackgroundResource = R.color.nav_color
         navView.itemActiveIndicatorColor = getColorStateList(R.color.black)
         navView.itemTextColor = getColorStateList(R.color.black)
 
