@@ -6,4 +6,10 @@
     <string name="title_profile">Profile</string>
     <string name="recommendation">Recommendation</string>
     <string name="controls">Controls</string>
+    <string name="clickToDoControl">Click to do one of the event below</string>
+    <string name="waterpump_title">Water Pump</string>
+    <string name="nutrientpump_title">Nutrient Pump</string>
+    <string name="onoff">On/Off</string>
+    <string name="light_title">Light</string>
+    <string name="todo">TODO</string>
 </resources>

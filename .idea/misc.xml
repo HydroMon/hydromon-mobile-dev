@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Bangkit2022/capstone_hydromon/hydromon-mobile-dev/app/src/main/res/layout/activity_main.xml" value="0.13722826086956522" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.136" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable/ic_baseline_power_settings_new_24.xml" value="0.136" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable/ic_launcher_background.xml" value="0.136" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/font-v26/montserrat.xml" value="0.1515625" />
@@ -13,7 +14,7 @@
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/font/montserrat_semibold.xml" value="0.2171875" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/activity_main.xml" value="0.1171875" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/contentbox.xml" value="0.16" />
-        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/fragment_control.xml" value="0.22" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/fragment_control.xml" value="0.25" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/fragment_home.xml" value="0.2056159420289855" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/profile_fragment.xml" value="0.1" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/recommendation.xml" value="0.18697916666666667" />
