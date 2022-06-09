@@ -10,10 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hydromon">
         <activity
+
             android:name=".ui.authentication.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".ui.authentication.LoginActivity"
+
+            android:name=".SignUpHydroponicsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseRole"
+
             android:exported="false" />
         <activity
             android:name=".MainActivity2"

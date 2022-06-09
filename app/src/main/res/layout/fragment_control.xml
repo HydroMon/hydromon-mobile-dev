@@ -4,19 +4,293 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E2ECFF"
     tools:context=".ui.control.ControlFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <!--    <TextView-->
+    <!--        android:id="@+id/text_dashboard"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:layout_marginEnd="8dp"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:visibility="invisible"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="378dp"
+        android:layout_height="206dp"
+
+        android:background="#FFFFFF"
+        android:backgroundTint="@color/white"
+        android:elevation="4dp"
+        app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07">
+
+        <TextView
+            android:id="@+id/recommendation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_semibold_600"
+            android:text="@string/recommendation"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="486dp"
+        android:layout_marginTop="276dp"
+
+        android:background="#FFFFFF"
+        android:backgroundTint="@color/white"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#C4C4C4"
+        app:strokeWidth="1sp">
+
+        <TextView
+            android:id="@+id/control_box"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="25dp"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_semibold_600"
+            android:text="@string/controls"
+            android:textAlignment="center"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/control_desc"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="60dp"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_semibold_600"
+            android:text="@string/clickToDoControl"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="16dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialNutrientPump"
+                    android:layout_width="385dp"
+                    android:layout_height="83dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="@color/white"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="15dp">
+
+                    <TextView
+                        android:id="@+id/nutrientpump_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat_semibold_600"
+                        android:text="@string/nutrientpump_title"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageViewNutrient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="25dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/nutrientpumpicon" />
+
+                    <TextView
+                        android:id="@+id/On_Off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="45dp"
+                        android:text="@string/onoff" />
+
+                    <ImageView
+                        android:id="@+id/powerButton"
+                        android:layout_width="42dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="25dp"
+
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_baseline_power_settings_new_24" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialWaterPump"
+                    android:layout_width="385dp"
+                    android:layout_height="83dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="@color/white"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="15dp">
+
+                    <TextView
+                        android:id="@+id/waterpump_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat_semibold_600"
+                        android:text="@string/waterpump_title"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageViewWater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="25dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/waterpumpicon" />
+
+                    <TextView
+                        android:id="@+id/On_OffWater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="45dp"
+                        android:text="@string/onoff" />
+
+                    <ImageView
+                        android:id="@+id/powerButtonWater"
+                        android:layout_width="42dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="25dp"
+
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_baseline_power_settings_new_24" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialLight"
+                    android:layout_width="385dp"
+                    android:layout_height="83dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="@color/white"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="15dp">
+
+                    <TextView
+                        android:id="@+id/light_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat_semibold_600"
+                        android:text="@string/light_title"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageViewLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="25dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/lighticon" />
+
+                    <TextView
+                        android:id="@+id/On_OffLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="45dp"
+                        android:text="@string/onoff" />
+
+                    <ImageView
+                        android:id="@+id/powerButtonLight"
+                        android:layout_width="42dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="25dp"
+
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_baseline_power_settings_new_24" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </TableRow>
+
+
+        </TableLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

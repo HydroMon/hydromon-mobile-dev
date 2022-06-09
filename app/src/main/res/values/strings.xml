@@ -7,5 +7,13 @@
     <string name="title_control">Control</string>
     <string name="title_variable">Variable</string>
     <string name="title_profile">Profile</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="controls">Controls</string>
+    <string name="clickToDoControl">Click to do one of the event below</string>
+    <string name="waterpump_title">Water Pump</string>
+    <string name="nutrientpump_title">Nutrient Pump</string>
+    <string name="onoff">On/Off</string>
+    <string name="light_title">Light</string>
+    <string name="todo">TODO</string>
     <string name="title_activity_main2">MainActivity2</string>
 </resources>
