@@ -10,24 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hydromon">
         <activity
-
-            android:name=".ui.authentication.RegisterActivity"
-            android:exported="false" />
+            android:name=".MainActivityViewer"
+            android:exported="false"
+            android:label="@string/title_activity_main_viewer" />
         <activity
-            android:name=".ui.authentication.LoginActivity"
-
             android:name=".SignUpHydroponicsActivity"
             android:exported="false" />
         <activity
-            android:name=".ChooseRole"
-
+            android:name=".ChooseRoleActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityOwner"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
