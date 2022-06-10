@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Bangkit2022/capstone_hydromon/hydromon-mobile-dev/app/src/main/res/layout/activity_main.xml" value="0.13722826086956522" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.136" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable/button.xml" value="0.195" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable/customet.xml" value="0.195" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.195" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable/ic_baseline_power_settings_new_24.xml" value="0.136" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/drawable/ic_launcher_background.xml" value="0.136" />
@@ -12,25 +15,29 @@
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/font-v26/montserrat_semibold.xml" value="0.2171875" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/font/montserrat.xml" value="0.1" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/font/montserrat_semibold.xml" value="0.2171875" />
-        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/activity_main.xml" value="0.1171875" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/activity_choose_role.xml" value="0.18697916666666667" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/activity_hydro_verification.xml" value="0.22" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/activity_main_owner.xml" value="0.18697916666666667" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/activity_main_viewer.xml" value="0.18697916666666667" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/activity_register.xml" value="0.14" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/content_hydro_verification.xml" value="0.11875" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/contentbox.xml" value="0.16" />
-        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/fragment_control.xml" value="0.25" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/fragment_control.xml" value="0.1" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/fragment_home.xml" value="0.2056159420289855" />
-        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/profile_fragment.xml" value="0.1" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/fragment_variable.xml" value="0.11875" />
+        <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/profile_fragment.xml" value="0.25" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/layout/recommendation.xml" value="0.18697916666666667" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/mipmap-anydpi-v26/ic_hydromon_logo.xml" value="0.136" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/mipmap-anydpi-v26/ic_hydromon_logo_round.xml" value="0.136" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.136" />
         <entry key="..\:/Semester 6/Bangkit SIB/hydromon-mobile-dev/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.136" />
-
-        <entry key="..\:/Bangkit2022/capstone_hydromon/hydromon-mobile-dev/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
-        <entry key="..\:/Bangkit2022/capstone_hydromon/hydromon-mobile-dev/app/src/main/res/layout/fragment_home.xml" value="0.14666666666666667" />
-        <entry key="..\:/Bangkit2022/capstone_hydromon/hydromon-mobile-dev/app/src/main/res/layout/fragment_variable.xml" value="0.14666666666666667" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
