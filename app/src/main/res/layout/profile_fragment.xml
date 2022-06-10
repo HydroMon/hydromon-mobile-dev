@@ -1,14 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_page_profile"
     tools:context=".ui.profile.ProfileFragment">
 
-    <TextView
-        android:id="@+id/textProfile"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
 
-</FrameLayout>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="415dp"
+        android:layout_height="635dp"
+        android:layout_marginTop="120dp"
+
+        android:background="#FFFFFF"
+        android:backgroundTint="@color/white"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#C4C4C4"
+        app:strokeWidth="1sp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTintMode="screen"
+            android:padding="18dp"
+            android:paddingStart="8dp"
+            android:paddingTop="5dp"
+            tools:ignore="RtlSymmetry">
+
+
+            <ImageView
+                android:id="@+id/img_item_photo"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.031"
+                tools:ignore="ImageContrastCheck"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:text="@string/name"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.107"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_item_photo" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="207dp"
+                android:layout_height="40dp"
+                android:background="@drawable/customet"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:text="@string/name"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.827"
+                app:layout_constraintStart_toEndOf="@+id/name"
+                app:layout_constraintTop_toTopOf="@+id/name" />
+
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/username"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/name"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="207dp"
+                android:layout_height="40dp"
+                android:background="@drawable/customet"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:text="@string/username"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/username"
+                app:layout_constraintEnd_toEndOf="@+id/et_name"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/username"
+                app:layout_constraintTop_toTopOf="@+id/username"
+                app:layout_constraintVertical_bias="0.45" />
+
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/email"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/username"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/username"
+                app:layout_constraintTop_toBottomOf="@+id/username" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="207dp"
+                android:layout_height="40dp"
+                android:background="@drawable/customet"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:text="@string/email"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/email"
+                app:layout_constraintEnd_toEndOf="@+id/et_username"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/email"
+                app:layout_constraintTop_toTopOf="@+id/email"
+                app:layout_constraintVertical_bias="0.45" />
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/password"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/email"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/email"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="207dp"
+                android:layout_height="40dp"
+                android:background="@drawable/customet"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:text="@string/password"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/password"
+                app:layout_constraintEnd_toEndOf="@+id/et_email"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/password"
+                app:layout_constraintTop_toTopOf="@+id/password"
+                app:layout_constraintVertical_bias="0.45" />
+
+            <TextView
+                android:id="@+id/tokenTools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/tokenTools"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/password"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/password"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
+
+            <EditText
+                android:id="@+id/et_tokenTools"
+                android:layout_width="207dp"
+                android:layout_height="40dp"
+                android:background="@drawable/customet"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:text="@string/tokenTools"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tokenTools"
+                app:layout_constraintEnd_toEndOf="@+id/et_password"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tokenTools"
+                app:layout_constraintTop_toTopOf="@+id/tokenTools"
+                app:layout_constraintVertical_bias="0.45" />
+
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/button"
+                android:drawableStart="@drawable/edit_icon"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingStart="25dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="10dp"
+                android:text="@string/editButton"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/et_tokenTools"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="@+id/tokenTools"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.901" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/hydromon_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

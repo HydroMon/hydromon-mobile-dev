@@ -112,64 +112,6 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/materialNutrientPump"
-                    android:layout_width="385dp"
-                    android:layout_height="83dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="#FFFFFF"
-                    android:backgroundTint="@color/white"
-                    android:elevation="5dp"
-                    app:cardCornerRadius="15dp">
-
-                    <TextView
-                        android:id="@+id/nutrientpump_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="80dp"
-                        android:layout_marginTop="15dp"
-                        android:background="@null"
-                        android:ems="10"
-                        android:fontFamily="@font/montserrat_semibold_600"
-                        android:text="@string/nutrientpump_title"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:id="@+id/imageViewNutrient"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="25dp"
-                        android:contentDescription="@string/todo"
-                        android:src="@drawable/nutrientpumpicon" />
-
-                    <TextView
-                        android:id="@+id/On_Off"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="80dp"
-                        android:layout_marginTop="45dp"
-                        android:text="@string/onoff" />
-
-                    <ImageView
-                        android:id="@+id/powerButton"
-                        android:layout_width="42dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="25dp"
-
-                        android:layout_marginEnd="5dp"
-                        android:contentDescription="@string/todo"
-                        android:src="@drawable/ic_baseline_power_settings_new_24" />
-                </com.google.android.material.card.MaterialCardView>
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:textAlignment="center">
 
@@ -223,6 +165,64 @@
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_baseline_power_settings_new_24" />
 
+                </com.google.android.material.card.MaterialCardView>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialNutrientPump"
+                    android:layout_width="385dp"
+                    android:layout_height="83dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="@color/white"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="15dp">
+
+                    <TextView
+                        android:id="@+id/nutrientpump_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat_semibold_600"
+                        android:text="@string/nutrientpump_title"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageViewNutrient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="25dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/nutrientpumpicon" />
+
+                    <TextView
+                        android:id="@+id/On_Off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="45dp"
+                        android:text="@string/onoff" />
+
+                    <ImageView
+                        android:id="@+id/powerButton"
+                        android:layout_width="42dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="25dp"
+
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_baseline_power_settings_new_24" />
                 </com.google.android.material.card.MaterialCardView>
 
             </TableRow>
