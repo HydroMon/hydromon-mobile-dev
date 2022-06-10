@@ -1,11 +1,8 @@
 package com.example.hydromon.ui.variable
 
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Color
 import android.os.Bundle
-import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -14,22 +11,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
-import com.example.hydromon.VariableValue
 import com.example.hydromon.databinding.FragmentVariableBinding
-import java.lang.Exception
-import java.util.*
-import kotlin.concurrent.schedule
 
 class VariableFragment : Fragment() {
 
     private var _binding: FragmentVariableBinding? = null
 
     private val binding get() = _binding!!
-    private lateinit var variableValue:VariableValue
+    private lateinit var variableValue: VariableValue
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -130,7 +121,6 @@ class VariableFragment : Fragment() {
                     }
                 }
             }
-
         })
 
         val humidityValueScreen: TextView = binding.humidityValueScreen
@@ -208,7 +198,7 @@ class VariableFragment : Fragment() {
 
             override fun afterTextChanged(p0: Editable?) {
                 if (p0.toString().isEmpty()) {
-                    ecEditText.error = "tes error"
+
                 }else{
                     if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
                         lightIntensityEditText.error = "invalid input"
@@ -223,7 +213,6 @@ class VariableFragment : Fragment() {
         val saveButton : Button = binding.saveButton
 
         saveButton.setOnClickListener{
-//            Log.d("variable inv", "${variableValue}")
             if((variableValue.tds>14 || variableValue.tds<1) || (variableValue.ph>14 || variableValue.ph<1) || (variableValue.ec>14 || variableValue.ec<1) || (variableValue.humidity>14 || variableValue.humidity<1) || (variableValue.temperature>14 || variableValue.temperature<1) || (variableValue.light_intensity>14 || variableValue.light_intensity<1)){
                 Log.d("variable inv", "INV VARIABLE")
             }else{
@@ -257,7 +246,7 @@ class VariableFragment : Fragment() {
 //        startActivity(intent)
     }
 
-    private fun loadVariable():VariableValue{
+    private fun loadVariable(): VariableValue {
         val preference : SharedPreferences = requireContext().getSharedPreferences("save_variable", Context.MODE_PRIVATE)
 
         val variableValue = VariableValue()
