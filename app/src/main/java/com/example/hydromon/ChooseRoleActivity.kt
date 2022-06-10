@@ -12,6 +12,7 @@ class ChooseRoleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityChooseRoleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val signUpHydroponics : Button = binding.hydroponics

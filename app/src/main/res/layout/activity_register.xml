@@ -75,7 +75,7 @@
 
 
     <Button
-        android:id="@+id/bt_login"
+        android:id="@+id/bt_register"
         android:layout_width="122dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

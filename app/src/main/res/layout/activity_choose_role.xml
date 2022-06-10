@@ -9,10 +9,10 @@
     >
 
     <TextView
-        android:id="@+id/question"
+        android:id="@+id/ask_role"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="200dp"
         android:textStyle="bold"
         android:textSize="25dp"
         android:textColor="@color/black"
@@ -22,11 +22,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:text="Which Role You Choose"
+        app:layout_constraintTop_toTopOf="@id/ask_role"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
     <Button
         android:id="@+id/hydroponics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up For Hydroponics"
+        android:text="Sign Up For Hydroponics\n(OWNERS)"
         android:paddingLeft="50dp"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
@@ -42,7 +56,7 @@
         android:id="@+id/viewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Track Owner's Hydroponics"
+        android:text="Track Owner's Hydroponics\n(VIEWERS)"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:background="@color/brown_wood"

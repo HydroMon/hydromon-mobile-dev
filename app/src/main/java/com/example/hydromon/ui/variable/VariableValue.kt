@@ -1,4 +1,4 @@
-package com.example.hydromon
+package com.example.hydromon.ui.variable
 
 data class VariableValue(
     var tds : Int = 23,
