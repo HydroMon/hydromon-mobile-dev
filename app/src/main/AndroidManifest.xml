@@ -19,7 +19,7 @@
             android:name=".SignUpHydroponicsActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivityOwner"
+            android:name=".ui.authentication.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".ChooseRoleActivity"
@@ -28,7 +28,7 @@
             android:name=".ui.authentication.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.authentication.LoginActivity"
+            android:name=".MainActivityOwner"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
