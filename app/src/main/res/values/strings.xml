@@ -33,4 +33,14 @@
     <string name="login">Login</string>
     <string name="editButton">Edit Profile</string>
     <string name="title_activity_main_viewer">Viewer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="history_desc">See History of the Hydroponic\'s Variables</string>
+    <string name="tds">TDS</string>
+    <string name="ph">pH</string>
+    <string name="ec">EC</string>
+    <string name="humidity">Humidity</string>
+    <string name="temperature">Temperature</string>
+    <string name="lightIntens">Light Intens</string>
+    <string name="allVariable">All Variable</string>
 </resources>
