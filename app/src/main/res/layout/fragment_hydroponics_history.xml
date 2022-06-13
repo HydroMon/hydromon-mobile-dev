@@ -375,10 +375,10 @@
 
 
                     <ImageView
-                        android:id="@+id/lightIntens"
+                        android:id="@+id/light_intens"
                         android:layout_width="38dp"
                         android:layout_height="38dp"
-                        android:src="@drawable/lightIntens"
+                        android:src="@drawable/light_intens"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.142"
@@ -432,10 +432,10 @@
 
 
                     <ImageView
-                        android:id="@+id/allVariable"
+                        android:id="@+id/all_variable"
                         android:layout_width="38dp"
                         android:layout_height="38dp"
-                        android:src="@drawable/allVariable"
+                        android:src="@drawable/all_variable"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

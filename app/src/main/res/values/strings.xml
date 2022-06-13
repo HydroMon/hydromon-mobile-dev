@@ -15,7 +15,7 @@
     <string name="onoff">On/Off</string>
     <string name="light_title">Light</string>
     <string name="todo">TODO</string>
-    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_main_viewer">MainActivityViewer</string>
     <string name="name">Name</string>
     <string name="title_activity_hydro_verification">HydroVerification</string>
     <string name="location">Location</string>
@@ -23,7 +23,6 @@
     <string name="hydro_name">Hydroponics Name</string>
     <string name="colon">:</string>
     <string name="role">Role</string>
-    <string name="task">Task</string>
     <string name="verifyButton">Verify</string>
     <string name="username">Username</string>
     <string name="email">Email</string>
@@ -32,7 +31,6 @@
     <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="editButton">Edit Profile</string>
-    <string name="title_activity_main_viewer">Viewer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="history_desc">See History of the Hydroponic\'s Variables</string>
@@ -43,4 +41,5 @@
     <string name="temperature">Temperature</string>
     <string name="lightIntens">Light Intens</string>
     <string name="allVariable">All Variable</string>
+    <string name="tools">Tools</string>
 </resources>

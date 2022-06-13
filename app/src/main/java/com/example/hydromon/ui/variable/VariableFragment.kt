@@ -140,7 +140,7 @@ class VariableFragment : Fragment() {
 
             override fun afterTextChanged(p0: Editable?) {
                 if (p0.toString().isEmpty()) {
-                    ecEditText.error = "tes error"
+                    humidityEditText.error = "tes error"
                 }else{
                     if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
                         humidityEditText.error = "invalid input"
@@ -169,7 +169,7 @@ class VariableFragment : Fragment() {
 
             override fun afterTextChanged(p0: Editable?) {
                 if (p0.toString().isEmpty()) {
-                    ecEditText.error = "tes error"
+                    temperatureEditText.error = "tes error"
                 }else{
                     if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
                         temperatureEditText.error = "invalid input"
@@ -198,7 +198,7 @@ class VariableFragment : Fragment() {
 
             override fun afterTextChanged(p0: Editable?) {
                 if (p0.toString().isEmpty()) {
-
+                    lightIntensityEditText.error = "teks kosong"
                 }else{
                     if (p0.toString().toFloat() > 14 || p0.toString().toFloat() < 1) {
                         lightIntensityEditText.error = "invalid input"

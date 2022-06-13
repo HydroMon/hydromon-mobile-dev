@@ -84,6 +84,11 @@ class ProfileFragment : Fragment() {
             }
         }
 
+
+//        val textView: TextView = binding.textProfile
+//        homeViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
         return root
     }
 

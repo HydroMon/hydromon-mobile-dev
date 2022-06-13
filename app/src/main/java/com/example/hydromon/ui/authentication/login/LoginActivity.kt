@@ -1,4 +1,4 @@
-package com.example.hydromon.ui.authentication
+package com.example.hydromon.ui.authentication.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +13,8 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.hydromon.*
 import com.example.hydromon.databinding.ActivityLoginBinding
+import com.example.hydromon.ui.authentication.LoginAtrribute
+import com.example.hydromon.ui.authentication.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -75,8 +77,11 @@ class LoginActivity : AppCompatActivity() {
                 if (it.code == "200") {
                     val intent = Intent(this@LoginActivity, MainActivityOwner::class.java)
                     startActivity(intent)
+                    finish()
                 }else{
-
+                    passwordText.error="gagal"
+                    emailtext.error="gagal"
+                    Toast.makeText(this@LoginActivity,"login gagal",Toast.LENGTH_SHORT).show()
                 }
             })
         }

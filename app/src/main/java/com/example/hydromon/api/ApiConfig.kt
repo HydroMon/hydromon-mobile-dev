@@ -1,4 +1,4 @@
-package com.example.hydromon
+package com.example.hydromon.api
 
 import androidx.viewbinding.BuildConfig
 import okhttp3.OkHttpClient

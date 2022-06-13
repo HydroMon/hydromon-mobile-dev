@@ -93,11 +93,11 @@
         app:layout_constraintTop_toBottomOf="@+id/hydro_name" />
 
     <TextView
-        android:id="@+id/task"
+        android:id="@+id/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="@string/task"
+        android:text="@string/tools"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -200,7 +200,7 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/task"
+        app:layout_constraintStart_toEndOf="@+id/tools"
         app:layout_constraintTop_toBottomOf="@+id/hydro_name7" />
 
 
@@ -218,7 +218,7 @@
         app:cardCornerRadius="20dp"
         app:cardElevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/task"
+        app:layout_constraintTop_toBottomOf="@+id/tools"
         app:strokeColor="#C4C4C4"
         app:strokeWidth="1sp">
 

@@ -1,4 +1,4 @@
-package com.example.hydromon
+package com.example.hydromon.api
 
 import com.google.gson.annotations.SerializedName
 import okhttp3.RequestBody
@@ -7,13 +7,10 @@ import retrofit2.http.*
 
 data class RegisterResponse(
     @field:SerializedName("code")
-    val code: String,
+    val code: Int,
 
     @field:SerializedName("status")
     val status: String,
-
-    @field:SerializedName("data")
-    val data: List<DataUser>
 )
 
 data class DataUser(
@@ -56,14 +53,26 @@ data class LoginResponse(
     val token: String
 )
 
+data class Response(
+
+    @field:SerializedName("protocol")
+    val protocol: String? = null,
+
+    @field:SerializedName("code")
+    val code: String? = null,
+
+    @field:SerializedName("message")
+    val message: String? = null,
+
+    @field:SerializedName("url")
+    val url: String? = null
+)
+
 interface ApiService {
 
     @POST("auth/register")
     fun register(
-        @Field("username")username:String,
-        @Field("email")email:String,
-        @Field("password")password:String,
-        @Field("number")number:Boolean,
+        @Body requestBody: RequestBody
         ): Call<RegisterResponse>
 
     @POST("auth/login")

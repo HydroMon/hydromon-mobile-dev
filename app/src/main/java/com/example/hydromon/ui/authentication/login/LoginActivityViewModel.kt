@@ -1,10 +1,11 @@
-package com.example.hydromon
+package com.example.hydromon.ui.authentication.login
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import okhttp3.MediaType.Companion.toMediaType
+import com.example.hydromon.api.ApiConfig
+import com.example.hydromon.api.LoginResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
@@ -21,11 +22,11 @@ class LoginActivityViewModel: ViewModel() {
         val jsonObject = JSONObject()
         jsonObject.put("email", email)
         jsonObject.put("password", password)
-
         val jsonObjectString = jsonObject.toString()
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
-        val loginRequest = ApiConfig.getApiService().login(requestBody)
-        loginRequest.enqueue(object : Callback<LoginResponse>{
+
+        val logging = ApiConfig.getApiService().login(requestBody)
+        logging.enqueue(object : Callback<LoginResponse>{
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 Log.d("isi", "${response}")
                 if (response.isSuccessful) {
@@ -35,7 +36,12 @@ class LoginActivityViewModel: ViewModel() {
                         loginResponse.postValue(responseBody)
                     }
                 }else{
-                    Log.d("response login gagal", "${response.message()}")
+                    Log.e("loginnya", "${response}")
+                    val responseBody = response.code().toString()
+
+                    loginResponse.postValue(LoginResponse(responseBody,"fail","null"))
+//                    var loginResponseLocal : LoginResponse
+                    Log.d("response login gagal", "${loginResponse}")
                 }
             }
 
