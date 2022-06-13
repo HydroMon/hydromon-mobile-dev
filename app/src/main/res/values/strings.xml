@@ -41,6 +41,7 @@
     <string name="ec">EC</string>
     <string name="humidity">Humidity</string>
     <string name="temperature">Temperature</string>
-    <string name="lightIntens">Light Intens</string>
-    <string name="allVariable">All Variable</string>
+    <string name="lightintens">Light Intens</string>
+    <string name="allvariable">All Variable</string>
+    <string name="logout">Log Out</string>
 </resources>
