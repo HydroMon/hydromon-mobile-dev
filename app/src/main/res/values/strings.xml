@@ -45,7 +45,7 @@
     <string name="tools">Tools</string>
 
     <string name="hydroponic_code">Hydroponic Code</string>
-    <string name="redeem">Redeem</string>
     <string name="enter_your_code_to_track_owner_s_hydroponic">Enter Your Code to Track Owner\'s Hydroponic</string>
+    <string name="redeem">Redeem</string>
 
 </resources>
