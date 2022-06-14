@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hydromon">
         <activity
-            android:name=".AllVariableHistoryActivity"
-            android:exported="false" />
-        <activity
             android:name=".EnterCodeViewerActivity"
             android:exported="false" />
         <activity
@@ -27,9 +24,10 @@
             android:label="@string/title_activity_main_viewer" />
         <activity
             android:name=".SignUpHydroponicsActivity"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".ui.authentication.login.LoginActivity" -->
-        <!-- android:exported="false" /> -->
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".ui.authentication.login.LoginActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".ChooseRoleActivity"
             android:exported="false" />
