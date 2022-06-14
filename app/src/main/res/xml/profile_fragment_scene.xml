@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MotionScene 
+<MotionScene
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
@@ -9,7 +9,9 @@
         motion:duration="1000">
        <KeyFrameSet>
        </KeyFrameSet>
-        <OnSwipe
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@+id/edit_button"
             motion:dragDirection="dragUp"
             motion:dragScale="1"
             motion:moveWhenScrollAtTop="true"
@@ -18,6 +20,24 @@
             motion:touchAnchorSide="top"
             />
     </Transition>
+
+<!--    <Transition-->
+<!--        motion:constraintSetEnd="@+id/end"-->
+<!--        motion:constraintSetStart="@id/start"-->
+<!--        motion:duration="1000">-->
+<!--       <KeyFrameSet>-->
+<!--       </KeyFrameSet>-->
+<!--        <OnClick-->
+<!--            motion:clickAction="toggle"-->
+<!--            motion:targetId="@+id/edit_button"-->
+<!--            motion:dragDirection="dragUp"-->
+<!--            motion:dragScale="1"-->
+<!--            motion:moveWhenScrollAtTop="true"-->
+<!--            motion:onTouchUp="stop"-->
+<!--            motion:touchAnchorId="@id/cardView4"-->
+<!--            motion:touchAnchorSide="top"-->
+<!--            />-->
+<!--    </Transition>-->
 
     <ConstraintSet android:id="@+id/start">
     </ConstraintSet>
@@ -35,24 +55,10 @@
             motion:layout_constraintStart_toStartOf="parent"
             android:visibility="invisible" />
         <Constraint
-            android:id="@+id/history_title"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="389dp"
-            android:layout_height="49dp"
-            motion:layout_constraintBottom_toTopOf="@+id/cardView4"
-            motion:layout_constraintTop_toBottomOf="@+id/hydromon_logo"
-            motion:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="15dp"
-            android:visibility="invisible"
-            motion:layout_constraintVertical_bias="0.0" />
-        <Constraint
-            android:id="@+id/cardView4"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="match_parent"
-            android:layout_height="730dp"
-            motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintHorizontal_bias="0.0"
-            motion:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="70dp" />
+            android:id="@+id/cardView5"
+            android:layout_width="414dp"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
     </ConstraintSet>
 </MotionScene>
