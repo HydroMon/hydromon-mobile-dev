@@ -45,4 +45,5 @@
     <string name="allvariable">All Variable</string>
     <string name="logout">Log Out</string>
     <string name="history_desc2">Select to see one of the Hydroponic\'s Variable\'s History</string>
+    <string name="value">Value</string>
 </resources>
