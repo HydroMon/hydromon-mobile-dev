@@ -363,7 +363,7 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/ec_history"
                 app:layout_constraintTop_toBottomOf="@+id/humidity_history"
-                app:layout_constraintVertical_bias="0.070">
+                app:layout_constraintVertical_bias="0.040">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
