@@ -258,6 +258,4 @@ class VariableFragment : Fragment() {
         variableValue.light_intensity = preference.getInt("LIGHT_INTENSITY_VALUE",23)
         return variableValue
     }
-
-
 }

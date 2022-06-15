@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
 //            textView.text = it
 //        }
         binding.plantHistory.setOnClickListener{
-            val intent = Intent(activity, HydroponicsHistoryActivity::class.java)
+            val intent = Intent(context, HydroponicsHistoryActivity::class.java)
             startActivity(intent)
         }
 

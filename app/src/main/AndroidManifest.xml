@@ -25,9 +25,9 @@
         <activity
             android:name=".SignUpHydroponicsActivity"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".ui.authentication.login.LoginActivity"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".HydroponicsHistoryActivity"
+            android:exported="false" />
         <activity
             android:name=".ChooseRoleActivity"
             android:exported="false" />

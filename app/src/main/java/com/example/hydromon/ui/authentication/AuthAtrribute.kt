@@ -10,3 +10,8 @@ data class RegisterAttribute(
     var email:String="",
     var password:String=""
 )
+
+data class LoginCookieAttribute(
+    var role:Int=-1,
+    var token:String=""
+)

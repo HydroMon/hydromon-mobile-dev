@@ -1,6 +1,7 @@
 package com.example.hydromon.ui.profile
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,11 +16,14 @@ import com.bumptech.glide.Glide
 import com.example.hydromon.R
 import com.example.hydromon.databinding.FragmentHomeBinding
 import com.example.hydromon.databinding.ProfileFragmentBinding
+import com.example.hydromon.ui.authentication.login.LoginActivity
+import com.example.hydromon.ui.authentication.login.LoginCookie
 import com.example.hydromon.ui.home.HomeViewModel
 
 class ProfileFragment : Fragment() {
 
     private var _binding: ProfileFragmentBinding? = null
+    private lateinit var loginCookie : LoginCookie
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -53,6 +57,17 @@ class ProfileFragment : Fragment() {
         disableET(binding.etEmail)
         disableET(binding.etTokenTools)
         var flag = false
+
+        val logoutButton : Button = binding.logoutButton
+        logoutButton.setOnClickListener{
+            loginCookie = LoginCookie(requireContext())
+            loginCookie.deleteCookie()
+            val moveToLogin = Intent(activity, LoginActivity::class.java)
+            activity?.finish()
+            startActivity(moveToLogin)
+
+        }
+
         binding.editButton.setOnClickListener{
             if(flag){
                 flag = false

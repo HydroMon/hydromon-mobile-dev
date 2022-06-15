@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.hydromon.api.ApiConfig
+import com.example.hydromon.api.DataLogin
 import com.example.hydromon.api.LoginResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -39,7 +40,7 @@ class LoginActivityViewModel: ViewModel() {
                     Log.e("loginnya", "${response}")
                     val responseBody = response.code().toString()
 
-                    loginResponse.postValue(LoginResponse(responseBody,"fail","null"))
+                    loginResponse.postValue(LoginResponse(responseBody,"fail","null", DataLogin()))
 //                    var loginResponseLocal : LoginResponse
                     Log.d("response login gagal", "${loginResponse}")
                 }

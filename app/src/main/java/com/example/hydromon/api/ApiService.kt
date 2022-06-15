@@ -50,7 +50,15 @@ data class LoginResponse(
     val status: String,
 
     @field:SerializedName("token")
-    val token: String
+    val token: String,
+
+    @field:SerializedName("data")
+    val data: DataLogin?
+)
+
+data class DataLogin(
+    @field:SerializedName("role")
+    val role: Int?=null,
 )
 
 data class Response(
