@@ -48,5 +48,11 @@
     <string name="redeem">Redeem</string>
     <string name="enter_your_code_to_track_owner_s_hydroponic">Enter Your Code to Track Owner\'s Hydroponic</string>
     <string name="logout">Logout</string>
-
+    <string name="lightintens">Light Intens</string>
+    <string name="allvariable">All Variable</string>
+    <string name="logout">Log Out</string>
+    <string name="history_desc2">Select to see one of the Hydroponic\'s Variable\'s History</string>
+    <string name="enter_your_code_to_track_owner_s_hydroponic">Enter Your code to track Owner’s Hydroponic</string>
+    <string name="hydroponic_code">Hydroponic Code</string>
+    <string name="redeem">Redeem</string>
 </resources>
