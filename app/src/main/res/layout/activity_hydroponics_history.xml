@@ -363,7 +363,7 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/ec_history"
                 app:layout_constraintTop_toBottomOf="@+id/humidity_history"
-                app:layout_constraintVertical_bias="0.070">
+                app:layout_constraintVertical_bias="0.040">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -397,7 +397,7 @@
                         android:fontFamily="@font/montserrat_semibold_600"
                         android:gravity="center|right"
                         android:paddingEnd="5dp"
-                        android:text="@string/light_intens"
+                        android:text="@string/lightintens"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -451,7 +451,7 @@
                         android:fontFamily="@font/montserrat_semibold_600"
                         android:gravity="center|right"
                         android:paddingEnd="5dp"
-                        android:text="@string/all_variable"
+                        android:text="@string/allvariable"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
