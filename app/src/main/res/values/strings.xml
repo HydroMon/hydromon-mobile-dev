@@ -46,4 +46,11 @@
     <string name="logout">Log Out</string>
     <string name="history_desc2">Select to see one of the Hydroponic\'s Variable\'s History</string>
     <string name="value">Value</string>
+
+    <string name="tools">Tools</string>
+
+    <string name="hydroponic_code">Hydroponic Code</string>
+    <string name="enter_your_code_to_track_owner_s_hydroponic">Enter Your Code to Track Owner\'s Hydroponic</string>
+    <string name="redeem">Redeem</string>
+
 </resources>
