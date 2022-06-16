@@ -5,19 +5,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.example.hydromon.ChooseRoleActivity
 import com.example.hydromon.MainActivityOwner
 import com.example.hydromon.databinding.ActivityRegisterBinding
+import com.example.hydromon.ui.authentication.LoginCookieAttribute
 import com.example.hydromon.ui.authentication.RegisterAttribute
+import com.example.hydromon.ui.authentication.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var registerViewModel: RegisterActivityViewModel
     private var registerAttribute : RegisterAttribute = RegisterAttribute()
+    private lateinit var loginCookieAttribute: LoginCookieAttribute
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,7 +96,7 @@ class RegisterActivity : AppCompatActivity() {
             registerViewModel.registerRequest(registerAttribute.username,registerAttribute.email,registerAttribute.password)
             registerViewModel.getRegisterResponse().observe(this,{
                 if (it.code == 200) {
-                    val intent = Intent(this@RegisterActivity, MainActivityOwner::class.java)
+                    val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 }else{
