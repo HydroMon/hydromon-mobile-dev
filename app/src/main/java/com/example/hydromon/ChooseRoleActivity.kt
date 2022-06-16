@@ -24,7 +24,8 @@ class ChooseRoleActivity : AppCompatActivity() {
         }
 
         trackOwnerHydroponics.setOnClickListener{
-//            val intent = Intent(this@ChooseRoleActivity, )
+            val intent = Intent(this@ChooseRoleActivity, EnterCodeViewerActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hydromon">
         <activity
+            android:name=".PerVariableHistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".EnterCodeViewerActivity"
             android:exported="false" />
         <activity
