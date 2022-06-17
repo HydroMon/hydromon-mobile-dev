@@ -64,6 +64,31 @@ data class DataLogin(
     val id: String=""
 )
 
+data class ProfileResponse(
+    @field:SerializedName("code")
+    val code: String? = null,
+    @field:SerializedName("status")
+    val status: String? = null,
+    @field:SerializedName("data")
+    val data: DataProfileResponse? = null
+)
+
+data class DataProfileResponse(
+    @field:SerializedName("id")
+    val id: String? = null,
+
+    @field:SerializedName("email")
+    val email: String? = null,
+
+    @field:SerializedName("username")
+    val username: String? = null,
+
+    @field:SerializedName("nama_lengkap")
+    val nama_lengkap: String? = null,
+
+
+)
+
 data class ResponseHydroponicsInsert(
 
     @field:SerializedName("code")
@@ -142,4 +167,20 @@ interface ApiService {
         @Path("id") id:String,
         @Body requestBody: RequestBody
     ): Call<ResponseChangeUserRole>
+
+    @GET("user/{id}")
+    fun setUserData(
+        @Header("Authorization") Authorization: String,
+        @Path("id") id:String
+    ): Call<ProfileResponse>
+
+    @PUT("user/{id}")
+    fun updateData(
+        @Header("Authorization") Authorization: String,
+        @Path("id") id:String,
+        @Body requestBody: RequestBody
+    ): Call<ProfileResponse>
+
+
+
 }

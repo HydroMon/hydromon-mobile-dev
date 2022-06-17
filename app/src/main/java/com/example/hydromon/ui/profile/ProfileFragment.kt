@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -40,6 +41,31 @@ class ProfileFragment : Fragment() {
 
         _binding = ProfileFragmentBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        loginCookie = activity?.let { LoginCookie(it) }!!
+        val userid = loginCookie.getCookie().id
+        val token = loginCookie.getCookie().token
+        Log.d("Test COOKIE -===", userid)
+
+
+        profileViewModel.setUserProfile(token, userid)
+        profileViewModel.getProfile().observe(viewLifecycleOwner){
+            var namalengkap: String
+            val username: String? = it.data?.username
+            val email: String? = it.data?.email
+
+            if(it.data?.nama_lengkap != null){
+                namalengkap = it.data.nama_lengkap
+            }else{
+                namalengkap = "-"
+            }
+                binding.etName.setText(namalengkap)
+                binding.etUsername.setText(username)
+                binding.etEmail.setText(email)
+                binding.etPassword.setText("********")
+        }
+
+
 //
 //        val photo: ImageView = binding.imgItemPhoto
 //        Glide.with(this)
@@ -55,7 +81,6 @@ class ProfileFragment : Fragment() {
         disableET(binding.etUsername)
         disableET(binding.etPassword)
         disableET(binding.etEmail)
-        disableET(binding.etTokenTools)
         var flag = false
 
         val logoutButton : Button = binding.logoutButton
@@ -72,30 +97,33 @@ class ProfileFragment : Fragment() {
             if(flag){
                 flag = false
                 binding.editButton.setText("Save")
-//                binding.etName.isFocusable = true
-//                binding.etUsername.isFocusable = true
-//                binding.etPassword.isFocusable = true
-//                binding.etEmail.isFocusable = true
-//                binding.etTokenTools.isFocusable = true
                 enableET(binding.etName)
                 enableET(binding.etUsername)
                 enableET(binding.etPassword)
                 enableET(binding.etEmail)
-                enableET(binding.etTokenTools)
             }else{
                 flag = true
+                val etNameData = binding.etName.text.toString()
+                val etUsernameData = binding.etUsername.text.toString()
+                val etEmailData = binding.etEmail.text.toString()
+
+                profileViewModel.updateProfile(
+                    token,
+                    userid,
+                    etNameData,
+                    etUsernameData,
+                    etEmailData
+                )
+
                 binding.editButton.setText("Edit Profile")
-//                binding.editButton.text = "Edit Profile"
-//                binding.etName.isFocusable = false
-//                binding.etUsername.isFocusable = false
-//                binding.etPassword.isFocusable = false
-//                binding.etEmail.isFocusable = false
-//                binding.etTokenTools.isFocusable = false
+                binding.etName.setText(etNameData)
+                binding.etUsername.setText(etUsernameData)
+                binding.etEmail.setText(etEmailData)
                 disableET(binding.etName)
                 disableET(binding.etUsername)
                 disableET(binding.etPassword)
                 disableET(binding.etEmail)
-                disableET(binding.etTokenTools)
+
             }
         }
 
@@ -114,7 +142,7 @@ class ProfileFragment : Fragment() {
 
     private fun disableET(editText: EditText){
         with(editText) {
-            isFocusable = false
+            isFocusableInTouchMode = false
             isEnabled = false
             setSelectAllOnFocus(false)
         }
@@ -122,7 +150,7 @@ class ProfileFragment : Fragment() {
 
     private fun enableET(editText: EditText){
         with(editText) {
-            isFocusable = true
+            isFocusableInTouchMode = true
             isEnabled = true
             setSelectAllOnFocus(true)
         }

@@ -66,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
                     if (p0.toString().isEmpty()) {
 
                     }else{
-                        loginAtrribute.email = p0.toString()
+                        loginAtrribute.email = p0.toString().trim()
                     }
                 }
             })
@@ -82,7 +82,7 @@ class LoginActivity : AppCompatActivity() {
                 }
 
                 override fun afterTextChanged(p0: Editable?) {
-                    loginAtrribute.password = p0.toString()
+                    loginAtrribute.password = p0.toString().trim()
                 }
             })
 
@@ -90,7 +90,7 @@ class LoginActivity : AppCompatActivity() {
             buttonLogin.setOnClickListener{
                 Log.d("login", "${loginAtrribute.email} dan ${loginAtrribute.password}")
                 loginViewModel.loginRequest(loginAtrribute.email,loginAtrribute.password)
-                loginViewModel.getLoginRequest().observe(this,{
+                loginViewModel.getLoginRequest().observe(this) {
                     if (it.code == "200") {
                         if (it.data?.role == 1) {
                             loginCookieAttribute.role = it.data?.role
@@ -100,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
                             val intent = Intent(this@LoginActivity, MainActivityOwner::class.java)
                             startActivity(intent)
                             finish()
-                        }else if (it.data?.role == 0) {
+                        } else if (it.data?.role == 0) {
                             loginCookieAttribute.role = it.data?.role
                             loginCookieAttribute.token = it.token
                             loginCookieAttribute.id = it.data?.id
@@ -108,22 +108,26 @@ class LoginActivity : AppCompatActivity() {
                             val intent = Intent(this@LoginActivity, MainActivityViewer::class.java)
                             startActivity(intent)
                             finish()
-                        }else{
+                        } else {
                             loginCookieAttribute.role = 2
                             loginCookieAttribute.token = it.token
                             loginCookieAttribute.id = it.data?.id.toString()
                             loginCookie(loginCookieAttribute)
 //                            Log.d("id user","${it.data?.id}")
                             val intent = Intent(this@LoginActivity, ChooseRoleActivity::class.java)
-                            intent.putExtra(ChooseRoleActivity.loginCookieAttribute, loginCookieAttribute)
+                            intent.putExtra(
+                                ChooseRoleActivity.loginCookieAttribute,
+                                loginCookieAttribute
+                            )
                             startActivity(intent)
                             finish()
                         }
-                        Log.d("cek cookie berhasil","${loadCookie}")
-                    }else{
-                        Toast.makeText(this@LoginActivity, "${it.status}", Toast.LENGTH_SHORT).show()
+                        Log.d("cek cookie berhasil", "${loadCookie}")
+                    } else {
+                        Toast.makeText(this@LoginActivity, "${it.status}", Toast.LENGTH_SHORT)
+                            .show()
                     }
-                })
+                }
             }
             val daftarSekarang : TextView = binding.daftarSekarang
             daftarSekarang.setOnClickListener {

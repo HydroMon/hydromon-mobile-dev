@@ -51,4 +51,5 @@
     <string name="logout">Log Out</string>
     <string name="enter_your_code_to_track_owner_s_hydroponic">Enter Your code to track Owner’s Hydroponic</string>
     <string name="redeem">Redeem</string>
+    <string name="value">Value</string>
 </resources>
