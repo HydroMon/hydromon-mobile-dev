@@ -9,10 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import com.bumptech.glide.Glide
 import com.example.hydromon.R
 import com.example.hydromon.databinding.FragmentHomeBinding
@@ -119,6 +116,7 @@ class ProfileFragment : Fragment() {
                 binding.etName.setText(etNameData)
                 binding.etUsername.setText(etUsernameData)
                 binding.etEmail.setText(etEmailData)
+                Toast.makeText(it.context, "User is updated successfully", Toast.LENGTH_SHORT).show()
                 disableET(binding.etName)
                 disableET(binding.etUsername)
                 disableET(binding.etPassword)
