@@ -48,9 +48,7 @@
     <string name="lightintens">Light Intens</string>
     <string name="allvariable">All Variable</string>
     <string name="history_desc2">Select to see one of the Hydroponic\'s Variable\'s History</string>
-<<<<<<< HEAD
+    <string name="logout">Log Out</string>
     <string name="enter_your_code_to_track_owner_s_hydroponic">Enter Your code to track Owner’s Hydroponic</string>
     <string name="redeem">Redeem</string>
-=======
->>>>>>> eb8d46dcfda04126b304a23102fac7f123a84db0
 </resources>
