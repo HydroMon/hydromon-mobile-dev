@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/hydroponic_verification_background"
-    tools:context=".HydroVerification">
+    tools:context=".hydroverification.HydroVerification">
 
     <TextView
         android:id="@+id/location"

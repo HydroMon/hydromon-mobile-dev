@@ -59,21 +59,63 @@ data class LoginResponse(
 data class DataLogin(
     @field:SerializedName("role")
     val role: Int?=null,
+
+    @field:SerializedName("id")
+    val id: String=""
 )
 
-data class Response(
-
-    @field:SerializedName("protocol")
-    val protocol: String? = null,
+data class ResponseHydroponicsInsert(
 
     @field:SerializedName("code")
-    val code: String? = null,
+    val code: Int? = null,
 
-    @field:SerializedName("message")
-    val message: String? = null,
+    @field:SerializedName("data")
+    val data: DataHydroponics? = null,
 
-    @field:SerializedName("url")
-    val url: String? = null
+    @field:SerializedName("status")
+    val status: String? = null
+)
+
+data class DataHydroponics(
+
+    @field:SerializedName("token_alat")
+    val tokenAlat: String? = null,
+
+    @field:SerializedName("createdAt")
+    val createdAt: String? = null,
+
+    @field:SerializedName("pemilik")
+    val pemilik: String? = null,
+
+    @field:SerializedName("lokasi_hidroponik")
+    val lokasiHidroponik: String? = null,
+
+    @field:SerializedName("nama_hidroponik")
+    val namaHidroponik: String? = null,
+
+    @field:SerializedName("updatedAt")
+    val updatedAt: String? = null
+)
+
+data class ResponseChangeUserRole(
+
+    @field:SerializedName("code")
+    val code: Int? = null,
+
+    @field:SerializedName("data")
+    val data: DataResponseUserRole? = null,
+
+    @field:SerializedName("status")
+    val status: String? = null
+)
+
+data class DataResponseUserRole(
+
+    @field:SerializedName("role")
+    val role: Int? = null,
+
+    @field:SerializedName("email")
+    val email: String? = null
 )
 
 interface ApiService {
@@ -81,10 +123,23 @@ interface ApiService {
     @POST("auth/register")
     fun register(
         @Body requestBody: RequestBody
-        ): Call<RegisterResponse>
+    ): Call<RegisterResponse>
 
     @POST("auth/login")
     fun login(
         @Body requestBody: RequestBody
-    ) : Call<LoginResponse>
+    ): Call<LoginResponse>
+
+    @POST("hidroponik")
+    fun insertHydroponics(
+        @Header("Authorization") Authorization: String,
+        @Body requestBody: RequestBody
+    ): Call<ResponseHydroponicsInsert>
+
+    @PUT("user/{id}")
+    fun changeUserRole(
+        @Header("Authorization") Authorization: String,
+        @Path("id") id:String,
+        @Body requestBody: RequestBody
+    ): Call<ResponseChangeUserRole>
 }

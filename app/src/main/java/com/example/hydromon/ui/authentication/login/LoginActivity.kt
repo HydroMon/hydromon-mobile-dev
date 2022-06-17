@@ -47,6 +47,7 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             }else{
                 val intent = Intent(this@LoginActivity, ChooseRoleActivity::class.java)
+                intent.putExtra(ChooseRoleActivity.loginCookieAttribute, loadCookie)
                 startActivity(intent)
                 finish()
             }
@@ -94,6 +95,7 @@ class LoginActivity : AppCompatActivity() {
                         if (it.data?.role == 1) {
                             loginCookieAttribute.role = it.data?.role
                             loginCookieAttribute.token = it.token
+                            loginCookieAttribute.id = it.data?.id
                             loginCookie(loginCookieAttribute)
                             val intent = Intent(this@LoginActivity, MainActivityOwner::class.java)
                             startActivity(intent)
@@ -101,6 +103,7 @@ class LoginActivity : AppCompatActivity() {
                         }else if (it.data?.role == 0) {
                             loginCookieAttribute.role = it.data?.role
                             loginCookieAttribute.token = it.token
+                            loginCookieAttribute.id = it.data?.id
                             loginCookie(loginCookieAttribute)
                             val intent = Intent(this@LoginActivity, MainActivityViewer::class.java)
                             startActivity(intent)
@@ -108,13 +111,15 @@ class LoginActivity : AppCompatActivity() {
                         }else{
                             loginCookieAttribute.role = 2
                             loginCookieAttribute.token = it.token
+                            loginCookieAttribute.id = it.data?.id.toString()
                             loginCookie(loginCookieAttribute)
+//                            Log.d("id user","${it.data?.id}")
                             val intent = Intent(this@LoginActivity, ChooseRoleActivity::class.java)
+                            intent.putExtra(ChooseRoleActivity.loginCookieAttribute, loginCookieAttribute)
                             startActivity(intent)
                             finish()
                         }
                         Log.d("cek cookie berhasil","${loadCookie}")
-
                     }else{
                         Toast.makeText(this@LoginActivity, "${it.status}", Toast.LENGTH_SHORT).show()
                     }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpHydroponicsActivity"
+    tools:context=".signuphydroponics.SignUpHydroponicsActivity"
     android:background="@drawable/signup_hydroponics_owner">
 
     <ImageView

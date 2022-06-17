@@ -7,6 +7,7 @@ class LoginCookie(context: Context) {
     companion object{
         private const val token = "token"
         private const val role = "role"
+        private const val id = "id"
     }
 
     private val cookie = context.getSharedPreferences("save_cookie", Context.MODE_PRIVATE)
@@ -15,6 +16,7 @@ class LoginCookie(context: Context) {
         val cookie = cookie.edit()
         cookie.putInt(role,loginCookie.role)
         cookie.putString(token,loginCookie.token)
+        cookie.putString(id,loginCookie.id)
         cookie.apply()
     }
 
@@ -22,8 +24,14 @@ class LoginCookie(context: Context) {
         val loginCookieAttribute = LoginCookieAttribute()
         loginCookieAttribute.role = cookie.getInt(role,-1)
         loginCookieAttribute.token = cookie.getString(token,"").toString()
-
+        loginCookieAttribute.id = cookie.getString(id,"").toString()
         return loginCookieAttribute
+    }
+
+    fun setRoleCookie(roleProcess:Int) {
+        val cookie = cookie.edit()
+        cookie.putInt(role,roleProcess)
+        cookie.apply()
     }
 
     fun deleteCookie() {
